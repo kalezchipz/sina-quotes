@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <title>In the wise words of Dr. Sina Abrari Vajari</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="quote-box">
+        <h2>"Sina-isms"</h2>
+        <blockquote>In the wise words of Dr. Sina Abrari Vajari,</blockquote>
+        <span id="quote">Loading...</span>
+        <div>
+            <button id="new-quote-btn">New Quote</button>
+        </div>
+    </div>
+
+
+<script>
+    // Array of quotes - Add Dr. Sina's quotes here!
+    const quotes = [
+        "I need to lie down.",
+        "I know everything that I need to know.",
+        "Men give birth to boys. Women give birth to girls.",
+        "I'm your parent's precious daughter.",
+        "Tldr those are my two cents (two hundred dollars).",
+        "I'm becoming the final boss of performative male.",
+        "I need to wear my fancy dress",
+        "I have an Apple discount.",
+        "I'll walk you to your car, then you can walk me to mine, then I'll walk you to yours...",
+        "Honestly I don't know anything; I was just a simple R&D engineer"
+       
+    ];
+
+    // Get the elements
+    const quoteElement = document.getElementById('quote');
+    const button = document.getElementById('new-quote-btn');
+
+    // Function to generate a random quote
+    function generateRandomQuote() {
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        quoteElement.textContent = quotes[randomIndex];
+    }
+
+    // Add click event to button
+    button.addEventListener('click', generateRandomQuote);
+
+    // Display a quote when the page loads
+    generateRandomQuote();
+</script>
+
+
+</body>
+</html>
